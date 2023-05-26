@@ -13,7 +13,7 @@ const [menu, setmenu] = React.useState(menudata.map(
 ))
 
     return(
-        <div className="mt-10 flex flex-col space-y-10 bg-darkalt w-14 rounded-full ml-2 pb-6">
+        <div className="mt-10 flex flex-col space-y-10 bg-darkalt w-14 rounded-full ml-2 pb-6 lg:block hidden">
             {menu}
         </div>
     )

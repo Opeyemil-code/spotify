@@ -16,6 +16,6 @@ const [result, setresult] = React.useState(chartData.map(
 ))
 
     return(
-        <div className="mt-14 flex flex-col space-y-6">{result}</div>
+        <div className="mt-6 flex flex-col space-y-6">{result}</div>
     )
 }

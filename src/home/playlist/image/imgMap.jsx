@@ -11,6 +11,6 @@ export default function Map(params) {
      ))
 
      return(
-        <div className="flex ml-8 absolut">{map}</div>
+        <div className="flex ml-8 absolut ">{map}</div>
      )
 }
