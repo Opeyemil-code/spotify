@@ -9,7 +9,7 @@ export default function Display(props) {
     return(
             
   <div className="flex flex-col mt- space-y-6 mt- mx-auto">
-    <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg">
+    <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mr-6">
               <div>
                 <img src={props.image} alt="" className="w-20 rounded-lg "/>
               </div>

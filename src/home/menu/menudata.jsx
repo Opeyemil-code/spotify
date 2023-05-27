@@ -1,7 +1,10 @@
+import {FaBars, FaTimes, FaHome} from "react-icons/fa"
+
+
 export default [
     {
         id : 1,
-        img : '/icons/Iconly/Bulk/Vector.pnG'
+        img : <FaHome />
     },
     {
         id: 2,
@@ -27,7 +30,7 @@ export default [
 
 /*
 
-
+/icons/Iconly/Bulk/Vector.pnG
 
 
 
