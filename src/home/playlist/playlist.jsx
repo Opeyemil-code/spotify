@@ -35,7 +35,7 @@ export default function Playlist(params) {
 
     return(
         <div>
-            <div className=" flex bg-red-90 lg:block hidden">
+            <div className=" flex bg-red-90 lg:block hidden ">
                 <h1 className="text-white font-quicksand font-bold text-2xl text-end mr-52">Top Charts</h1>
             </div>
 
@@ -46,7 +46,7 @@ export default function Playlist(params) {
 
            {
             /**this is mobile Text */
-             <h1 className="text-white  font-quicksand font-bold text-2xl ml-3 lg:hidden mt-2">Top Charts</h1>
+             <h1 className="text-white  font-quicksand font-bold text-2xl ml-3 lg:hidden mt-4">Top Charts</h1>
            }
 
            <Carousel responsive={responsive} className="lg:hidden">
