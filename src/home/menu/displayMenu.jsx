@@ -8,11 +8,11 @@ import logout from '/new-icon/icons8-logout-50.png'
 
 export default function Display(props) {
 
-
+       
 
     return(
         <>
-        {props.open ? <div className="mt-4 lg:mt-10 flex flex-col space-y-8 bg-darkalt lg:w-20 lg:rounded-full  pb-4 lg:block hidde text-center w-11/12 mx-auto rounded-lg lg:relative absolut lg:ml-6 absolute ml-4 shadow-2xl shadow-black">
+        {props.open == true ? null : <div className="mt-4 lg:mt-10 flex flex-col space-y-8 bg-darkalt lg:w-20 lg:rounded-full  pb-4 lg:block hidde text-center w-11/12 mx-auto rounded-lg lg:relative absolut lg:ml-6 absolute ml-4 shadow-2xl shadow-black">
                 <button className="mt-4 flex flex-row  rounded-lg lg:mx-auto lg:w-8 hove:bg-yellow-500 ml-2 space-x-6">
                     <FaHome className="w-10 h-6 bg-white"/>
                     <h1 className="lg:hidden text-white font-quicksand text-lg font-bold hover:text-yellow-500">Home</h1>
@@ -43,7 +43,7 @@ export default function Display(props) {
                     <img src={logout} alt=""  className="w-10 h-8 bg-white rounded-lg hover:bg-yellow-500"/>
                     <h1 className="lg:hidden text-white font-quicksand text-lg font-bold hover:text-yellow-500">Log out</h1>
                 </button>    
-            </div> : null}
+            </div>}
             </>
     )
 }

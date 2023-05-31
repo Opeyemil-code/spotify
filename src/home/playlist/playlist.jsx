@@ -46,14 +46,16 @@ export default function Playlist(params) {
 
            {
             /**this is mobile Text */
-             <h1 className="text-white  font-quicksand font-bold text-2xl ml-3 lg:hidden mt-4">Top Charts</h1>
+             <h1 className="text-white  font-quicksand font-bold text-2xl ml-8 lg:hidden mt-4">Top Charts</h1>
            }
 
            <Carousel responsive={responsive} className="lg:hidden">
 
-           <div className="flex bg-whit">
 
-           <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4">
+            {/** First div boxes */}
+           <div className="flex bg-whit pb-4">
+
+           <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4 pb-4">
 
               <main className="flex flex-col ml-4 space-y-2 mt-2 bg-yellow-90">
               <div>
@@ -81,7 +83,7 @@ export default function Playlist(params) {
 
            <div>
 
-          <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4">
+          <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4 pb-4">
 
          <main className="flex flex-col ml-4 space-y-2 mt-2 bg-yellow-90">
        <div>
@@ -109,7 +111,7 @@ export default function Playlist(params) {
 {/** Third carousel Box starts here */}
         <div>
  
-        <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4">
+        <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4 pb-4">
 
         <main className="flex flex-col ml-4 space-y-2 mt-2 bg-yellow-90">
         <div>

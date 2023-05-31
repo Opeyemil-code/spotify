@@ -19,7 +19,7 @@ export default function NewRelease(params) {
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 3
+          items: 4
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
@@ -35,45 +35,47 @@ export default function NewRelease(params) {
 
 
     return(
-        <div className="flex flex-col bg-black lg:w-2/3 mx-auto">
-            <h1 className="lg:ml-10 mt-6 text-2xl font-bold font-quicksand text-white ml-6">New release</h1>
+        <div className="bg-black">
+            <div className="flex flex-col bg-black lg:w-2/3 mx-auto ">
+            <h1 className="lg:ml-16 mt-6 text-2xl font-bold font-quicksand text-white ml-6 ">New release</h1>
             
-               <Carousel responsive={responsive} className="flex flex-row ml-16 mt-4">
+               <Carousel responsive={responsive} className="flex flex-row lg:ml-16 mt-4 bg-red-90">
 
-               <div className="flex flex-col mt- space-y-2">
-                    <img src={Glass} alt="" className="w-52 h-52 rounded-xl"/>
-                    <h1 className="text-lg text-white font-bold font-quicksand">life in a bubble</h1>
+               <div className="flex flex-col mt- space-y-2 bg-red-90 lg:">
+                    <img src={Glass} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
+                    <h1 className="text-lg text-white font-bold font-quicksand lg:mx-0 mx-auto">Life in a bubble</h1>
+                </div>
+
+                <div className="flex flex-col mt- space-y-2 bg-red-90">
+                    <img src={mountain} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
+                    <h1 className="text-lg text-white font-bold font-quicksand lg:mx-0 mx-auto">Mountain</h1>
+                </div>
+
+                <div className="flex flex-col mt- space-y-2 bg-red-90">
+                    <img src={limit} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
+                    <h1 className="text-lg text-white font-bold font-quicksand lg:mx-0 mx-auto">life in a bubble</h1>
                 </div>
 
                 <div className="flex flex-col mt- space-y-2">
-                    <img src={mountain} alt="" className="w-52 h-52 rounded-xl"/>
-                    <h1 className="text-lg text-white font-bold font-quicksand">Mountain</h1>
+                    <img src={everything} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
+                    <h1 className="text-lg text-white font-bold font-quicksand lg:mx-0 mx-auto">life in a bubble</h1>
                 </div>
 
                 <div className="flex flex-col mt- space-y-2">
-                    <img src={limit} alt="" className="w-52 h-52 rounded-xl"/>
-                    <h1 className="text-lg text-white font-bold font-quicksand">life in a bubble</h1>
+                    <img src={vivid} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
+                    <h1 className="text-lg text-white font-bold font-quicksand lg:mx-0 mx-auto">life in a bubble</h1>
                 </div>
 
                 <div className="flex flex-col mt- space-y-2">
-                    <img src={everything} alt="" className="w-52 h-52 rounded-xl"/>
-                    <h1 className="text-lg text-white font-bold font-quicksand">life in a bubble</h1>
-                </div>
-
-                <div className="flex flex-col mt- space-y-2">
-                    <img src={vivid} alt="" className="w-52 h-52 rounded-xl"/>
-                    <h1 className="text-lg text-white font-bold font-quicksand">life in a bubble</h1>
-                </div>
-
-                <div className="flex flex-col mt- space-y-2">
-                    <img src={doubleface} alt="" className="w-52 h-52 rounded-xl"/>
-                    <h1 className="text-lg text-white font-bold font-quicksand">life in a bubble</h1>
+                    <img src={doubleface} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
+                    <h1 className="text-lg text-white font-bold font-quicksand lg:mx-0 mx-auto">life in a bubble</h1>
                 </div>
 
                 </Carousel> 
 
             
 
+        </div>
         </div>
     )
 }
