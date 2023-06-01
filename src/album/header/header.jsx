@@ -5,12 +5,12 @@ import Favorite from '/icons/Heart.png'
 
 export default function Heading(params) {
     return(
-        <section className="bg-pattern bg-cover bg-repeat pb-8 opacity-4 lg:p-4">
+        <section className="bg-pattern bg-cover bg-repeat pb-8 opacity-4 lg:p-16">
 
-            <div className="lg:w-3/5 mx-auto mt- bg-blac text-white">
+            <div className="lg:w-3/5 mx-auto  bg-blac text-white">
 
             <div className="flex lg:flex-row lg:space-x-6 flex-col">
-              <img src={level} alt="" className="rounded-lg w-72 lg:w-auto mx-auto lg:mx-0 z-40"/>
+              <img src={level} alt="" className="rounded-lg w-72 lg:w-auto mx-auto lg:mx-0 z-40 mt-8"/>
 
               <div className="lg:mt-16 flex flex-col space-y-5  bg-red-90 font-quicksand">
 
@@ -19,7 +19,7 @@ export default function Heading(params) {
                 <h1 className="font-bold text-lg text-center lg:text-left">64 songs - 16 hrs</h1>
 
                 
-                   <div className="flex flex-row space-x-4 mx-auto w-full">
+                   <div className="flex flex-row space-x-4 mx-auto w-full justify-cente">
 
                        <button className="flex flex-row border space-x-6 w-28 justify-center h-7 rounded-lg bg-dark">
                        <FaPlay className="w-5 mt-1 border-2  rounded bg-yellow-700"/>
