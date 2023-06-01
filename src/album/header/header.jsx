@@ -2,6 +2,7 @@ import React from "react";
 import level from '/images/Lead-image.png'
 import {FaPlay} from "react-icons/fa"
 import Favorite from '/icons/Heart.png'
+import Mapp from "../playlist/map";
 
 export default function Heading(params) {
     return(
@@ -19,9 +20,9 @@ export default function Heading(params) {
                 <h1 className="font-bold text-lg text-center lg:text-left">64 songs - 16 hrs</h1>
 
                 
-                   <div className="flex flex-row space-x-4 mx-auto w-full justify-cente">
+                   <div className="flex flex-row space-x-2  mx-auto w-full  bg-red-90 lg:ml-0">
 
-                       <button className="flex flex-row border space-x-6 w-28 justify-center h-7 rounded-lg bg-dark">
+                       <button className="flex flex-row border space-x-6 w-28 justify-center h-7 rounded-lg bg-dark lg:mx-0 mx-auto">
                        <FaPlay className="w-5 mt-1 border-2  rounded bg-yellow-700"/>
                         <h3>Play all</h3>
                        </button>
@@ -42,6 +43,8 @@ export default function Heading(params) {
               </div>
             </div>
         </div>
+
+        <Mapp />
         </section>
     )
 }

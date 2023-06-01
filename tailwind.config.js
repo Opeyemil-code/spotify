@@ -13,7 +13,7 @@ export default {
         blue : '#609EAF',
         oho : '#31E1E1',
         darkalt : '#1A1E1F',
-        dark :  '#33373B5E',
+        dark :  '#33373B',
       },
       backgroundImage:{
           'pattern' : "url('/images/Rectangle26.png')"
