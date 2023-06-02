@@ -4,7 +4,7 @@ import Mapcolllection from "./mapcollection";
 
 export default function Collect(params) {
     return (
-        <section className="w- mx-auto bg-black lg:p-8 p-4">
+        <section className="w- mx-auto bg-black lg:pb-28 p-4">
 
            <div className="lg:w-2/3 mx-auto text-white bg-green-30">
 

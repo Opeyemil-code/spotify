@@ -14,6 +14,7 @@ export default {
         oho : '#31E1E1',
         darkalt : '#1A1E1F',
         dark :  '#33373B',
+        shark : '#110901FF'
       },
       backgroundImage:{
           'pattern' : "url('/images/Rectangle26.png')"

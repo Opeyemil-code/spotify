@@ -6,12 +6,15 @@ import Home from './home/home'
 import NewRelease from './home/new release/new'
 import Album from './album/head'
 import Collect from './collection/collect'
+import Playing from './playing/play'
+
 
 function App() {
   return (
       <>
       <Home />
       <NewRelease/>
+      <Playing />
       <Album/>
       <Collect />
       </>
