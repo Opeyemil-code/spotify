@@ -16,11 +16,11 @@ export default function Heading(params) {
               <div className="lg:mt-16 flex flex-col space-y-5  bg-red-90 font-quicksand">
 
                 <h1 className="text-2xl font-bold font-quicksand lg:text-left text-center mt-3 lg:mt-0">Tomorrow's tunes</h1>
-                <p className="font-medium lg:w-2/3 mx-auto lg:mx-0 text-center lg:text-left w-">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, beatae ad? Aspernatur,</p>
+                <p className="font-medium lg:w-2/3 mx-auto lg:mx-0 text-center lg:text-left w-11/12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, beatae ad? Aspernatur,</p>
                 <h1 className="font-bold text-lg text-center lg:text-left">64 songs - 16 hrs</h1>
 
                 
-                   <div className="flex flex-row space-x-2  mx-auto w-full  bg-red-90 lg:ml-0">
+                   <div className="flex flex-row space-x-1  mx-auto w-full  bg-red-90 lg:ml-0">
 
                        <button className="flex flex-row border space-x-6 w-28 justify-center h-7 rounded-lg bg-dark lg:mx-0 mx-auto">
                        <FaPlay className="w-5 mt-1 border-2  rounded bg-yellow-700"/>

@@ -6,23 +6,23 @@ export default function Collection(props) {
 
             <div>
 
-              <div className="absolute mt-40 ml-6">                    
+              <div className="absolute lg:mt-40 ml-6 mt-28 font-quicksand ">                    
               
                 <h1 className="font-bold font-quicksand text-2xl mt-2">{props.display.header}
                 </h1>
                 <p>{props.display.paragraph}</p>
 
-                <div className="flex flex-row mt-5 space-x-32 bg-green-20  lg:hidden">
+                <div className="flex flex-row mt-4 space-x-40 bg-green-20  lg:hidden">
                     <h1>23m Likes</h1>
 
-                    <button className="border rounded-full p-2">
+                    <button className="border rounded-full p-2 hover:bg-yellow-400">
                     <FaPlay className=""/>
                     </button>
                 </div>
 
               </div>
 
-                <img src={props.display.img} alt="" className="lg:w-60 w-72  rounded-xl"/>
+                <img src={props.display.img} alt="" className="lg:w-60 w-80 h-60  rounded-xl"/>
 
 
             </div>
