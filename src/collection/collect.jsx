@@ -9,8 +9,8 @@ export default function Collect(params) {
            <div className="lg:w-2/3 mx-auto text-white bg-green-30">
 
            <div  className="flex flex-row space-x-5 justify-center lg:justify-start">
-                <button className="py-2 px-7 border-2 rounded-full ">My collections</button>
-                <button className="py-2 px-5 border-2 rounded-full">Likes</button>
+                <button className="py-2 px-7 border-2 rounded-full hover:bg-yellow-300">My collections</button>
+                <button className="py-2 px-5 border-2 rounded-full hover:bg-yellow-300">Likes</button>
             </div> 
 
             <Mapcolllection/>
