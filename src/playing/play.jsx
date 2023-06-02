@@ -16,7 +16,7 @@ export default function Playing(params) {
     return(
         <section className="bg-red-900  text-red-800">
            
-           <div className="bg-shark top-96 mt-28 fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white ">
+           <div className="bg-shark top-96 mt-40 fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white ">
            
             <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand lg:space-x-14">
 
