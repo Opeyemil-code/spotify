@@ -1,12 +1,12 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Glass from '/images/Rectangle 14.png';
-import mountain from '/images/Rectangle 15.png';
-import limit from '/images/Rectangle 16.png';
-import everything from '/images/Rectangle 18.png';
-import vivid from '/images/Rectangle 20.png'
-import doubleface from '/images/Rectangle 21.png'
+import Glass from '/images/Rectangle14.png';
+import mountain from '/images/Rectangle15.png';
+import limit from '/images/Rectangle16.png';
+import everything from '/images/Rectangle18.png';
+import vivid from '/images/Rectangle20.png'
+import doubleface from '/images/Rectangle21.png'
 
 
 export default function NewRelease(params) {

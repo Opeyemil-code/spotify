@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        img : "/images/Rectangle 18.png",
+        img : "/images/Rectangle18.png",
         favorite : '/icons/Heart.png',
         text : 'let me love you',
         type : 'Single',
@@ -10,46 +10,46 @@ export default [
     },
     {
         id: 2,
-        img : "/images/Rectangle 18.png",
+        img : "/images/Rectangle14.png",
         favorite : '/icons/Heart.png',
-        text : 'let me love you',
-        type : 'Single',
-        duration : '2:56',
+        text : 'Alarm clock',
+        type : 'Burna boy',
+        duration : '3:45',
         icon : '/icons/Viewchart/more-vertical.png'
     },
     {
         id: 3,
-        img : "/images/Rectangle 18.png",
+        img : "/images/Rectangle16.png",
         favorite : '/icons/Heart.png',
-        text : 'let me love you',
-        type : 'Single',
-        duration : '2:56',
+        text : 'Stand strong',
+        type : 'Davido',
+        duration : '3:55',
         icon : '/icons/Viewchart/more-vertical.png'
     },
     {
         id: 4,
-        img : "/images/Rectangle 18.png",
+        img : "/images/Rectangle20.png",
         favorite : '/icons/Heart.png',
-        text : 'let me love you',
-        type : 'Single',
-        duration : '2:56',
+        text : 'comfort',
+        type : 'Vector',
+        duration : '3:02',
         icon : 'icons/Viewchart/more-vertical.png'
     },
     {
         id: 5,
-        img : "/images/Rectangle 18.png",
+        img : "/images/Rectangle28.png",
         favorite : '/icons/Heart.png',
-        text : 'let me love you',
-        type : 'Single',
-        duration : '2:56',
+        text : 'Mind Games',
+        type : 'Vector',
+        duration : '3:03',
         icon : 'icons/Viewchart/more-vertical.png'
     },
     {
         id: 6,
-        img : "/images/Rectangle 18.png",
+        img : "/images/Rectangle15.png",
         favorite : '/icons/Heart.png',
-        text : 'let me love you',
-        type : 'Single',
+        text : 'Mighty wine',
+        type : 'wizkid',
         duration : '2:56',
         icon : 'icons/Viewchart/more-vertical.png'
     }
