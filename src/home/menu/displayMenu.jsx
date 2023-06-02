@@ -12,7 +12,7 @@ export default function Display(props) {
 
     return(
         <>
-        {props.open == true ? null : <div className="mt-2 lg:mt-10 flex flex-col space-y-8 bg-darkalt lg:w-20 lg:rounded-full  lg:pb-4 lg:block hidde text-center w-full mx-auto rounded-lg lg:relative absolut lg:ml-6 absolute lg:ml-4 shadow-2xl shadow-black pb-40 z-50">
+        {props.open == true ? null : <div className="mt-2 lg:mt-10 flex flex-col space-y-8 bg-darkalt lg:w-20 lg:rounded-full  lg:pb-4 lg:block hidde text-center w-11/12 mx-auto rounded-lg lg:relative absolut lg:ml-6 absolute ml-4 shadow-2xl shadow-black pb-40 z-50 ">
                 <button className="mt-4 flex flex-row  rounded-lg lg:mx-auto lg:w-8 hove:bg-yellow-500 ml-2 space-x-6">
                     <FaHome className="w-10 h-6 bg-white"/>
                     <h1 className="lg:hidden text-white font-quicksand text-lg font-bold hover:text-yellow-500">Home</h1>
