@@ -22,7 +22,7 @@ export default function Collection(props) {
 
               </div>
 
-                <img src={props.display.img} alt="" className="lg:w-60 w-80 h-60  rounded-xl"/>
+                <img src={props.display.img} alt="" className="lg:w-60 w-80 h-60  rounded-xl ease-in-out duration-100 delay-100 hover:transition hover:transition-transform lg:hover:scale-110 lg:hover:scale-130 hover:scale-90"/>
 
 
             </div>

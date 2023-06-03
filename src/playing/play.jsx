@@ -18,7 +18,7 @@ export default function Playing(params) {
            
            <div className="bg-gradient-to-r from-gray-800 to-gray-300 top- bottom-0   fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white h-28">
            
-            <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand lg:space-x-14 space-x-8">
+            <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand space-x-14 ">
 
               <div className="flex mt-2 flex-row space-x-2 lg:w-60 bg-green-30 w-60 bg-whit">
                 <img src="/images/Rectangle14.png" alt="" className="w-20 rounded-lg "/>
@@ -32,16 +32,16 @@ export default function Playing(params) {
               <div className="flex lg:flex-col w-2/3 bg-whit lg:space-y-5 flex-row absolute top-0 lg:relative lg:mt-0 mt-6">
 
                 <div className="flex flex-row lg:space-x-40 mt-4 mx-auto lg:ml-0 ml-48 space-x-4">
-                 <img src={Shuffle} alt="" className="lg:block hidden"/>
-                <img src={Previous} alt="" className="lg:block hidden"/>
-                <div className="border px-1 py-1 rounded-full hover:bg-yellow-300">
+                 <img src={Shuffle} alt="" className="lg:block hidden w-5 h-7 mt-1"/>
+                <img src={Previous} alt="" className="lg:block hidden w-5 h-7 mt-1"/>
+                <div className="border px-2 py-2 rounded-full hover:bg-yellow-300">
                 <FaPlay className=""/>
                 </div>
-                <img src={Next} alt="" className="lg:block hidde"/>
-                <img src={repeat} alt="" className="lg:block hidden"/>
+                <img src={Next} alt="" className="lg:block w-5 h-7 mt-1"/>
+                <img src={repeat} alt="" className="lg:block hidden w-5 h-7 mt-1"/>
                 </div>
 
-                <div className="w-full bg-whit lg:ml-10">
+                <div className="w-full bg-whit">
                 <progress id="file" value="32" max="100" className="w-11/12 h-1 text-red-700 lg:block hidden" > 32% </progress> 
                 </div>
 
