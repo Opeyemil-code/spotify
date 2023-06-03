@@ -14,9 +14,9 @@ export default function Playing(params) {
 
 
     return(
-        <section className="bg-red-900  text-red-800">
+        <section className="bg-red-900  text-red-800 z-99">
            
-           <div className="bg-shark top-96 mt-72 fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white ">
+           <div className="bg-shark top- bottom-0   fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white h-28">
            
             <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand lg:space-x-14">
 
@@ -29,7 +29,7 @@ export default function Playing(params) {
               </div>
 
 
-              <div className="flex lg:flex-col w-2/3 bg-whit lg:space-y-5 flex-row">
+              <div className="flex lg:flex-col w-2/3 bg-whit lg:space-y-5 flex-row absolute top-0 lg:relative lg:mt-0 mt-6">
 
                 <div className="flex flex-row lg:space-x-40 mt-4 mx-auto lg:ml-0 ml-48 space-x-4">
                  <img src={Shuffle} alt="" className="lg:block hidden"/>

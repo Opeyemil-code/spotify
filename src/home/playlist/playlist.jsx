@@ -34,7 +34,7 @@ export default function Playlist(params) {
 
 
     return(
-        <div>
+        <div className="z-10">
             <div className=" flex bg-red-90 lg:block hidden ">
                 <h1 className="text-white font-quicksand font-bold text-2xl text-end mr-52">Top Charts</h1>
             </div>

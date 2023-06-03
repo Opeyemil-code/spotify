@@ -35,11 +35,11 @@ export default function NewRelease(params) {
 
 
     return(
-        <div className="bg-black">
+        <div className="bg-black ">
             <div className="flex flex-col bg-black lg:w-2/3 mx-auto ">
             <h1 className="lg:ml-16 mt-6 text-2xl font-bold font-quicksand text-white ml-6 ">New release</h1>
             
-               <Carousel responsive={responsive} className="flex flex-row lg:ml-16 mt-4 bg-red-90 pb-8">
+               <Carousel responsive={responsive} className="flex flex-row lg:ml-16 mt-4 bg-red-90 pb-8 z-10">
 
                <div className="flex flex-col mt- space-y-2 bg-red-90 lg:">
                     <img src={Glass} alt="" className="lg:w-52 lg:h-52 rounded-xl w-72 h-72 mx-auto lg:mx-0"/>
