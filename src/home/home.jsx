@@ -22,8 +22,8 @@ export default function Home(params) {
         <div className="flex flex-row space-x-6 bg-black ">
         {
             <button onClick={handleMenu}>
-               { open == true ? 
-             <FaTimes className="ml-6 w-12 mt-3 lg:hidden bg-white rounded h-6"/> : <FaBars className="ml-6 w-12 mt-3 lg:hidden bg-white rounded h-7"/>}
+               { open  ? <FaBars className="ml-6 w-12 mt-3 lg:hidden bg-white rounded h-7"/> :
+             <FaTimes className="ml-6 w-12 mt-3 lg:hidden bg-white rounded h-6"/>}
             </button>
         }
         <img src={Logo} alt="" className="lg:ml-16 mt-2"/>
