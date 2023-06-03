@@ -18,7 +18,7 @@ export default function Playing(params) {
            
            <div className="bg-gradient-to-r from-gray-800 to-gray-300 top- bottom-0   fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white h-28">
            
-            <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand space-x-14 ">
+            <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand space-x-16 ">
 
               <div className="flex mt-2 flex-row space-x-2 lg:w-60 bg-green-30 w-60 bg-whit">
                 <img src="/images/Rectangle14.png" alt="" className="w-20 rounded-lg "/>
