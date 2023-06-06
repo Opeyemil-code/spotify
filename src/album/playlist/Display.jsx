@@ -1,13 +1,31 @@
 import React from "react";
 import {faEllipsisV, faHeart, faListUl} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useSound from "use-sound";
+import { useState, useRef } from "react";
+import playData from "./playData";
 
 
 export default function Display(props) {
-    return(
-        <div className="flex flex-row mt-10 bg-dark lg:space-x-40 h-12 rounded-lg space-x-4 lg:w-auto  mx-auto font-quicksand w-11/12"> 
 
+  const audioEle = useRef()
+
+  const [isPlaying,setIsPlaying] = useState(false)
+  //const [currentSong, setCurrentSong] = useState(playData[0])
+
+  function playMusic(params) {
+       if (isPlaying) {
+        audioEle.current.play()
+        setIsPlaying(false)
+       } else {
+        audioEle.current.pause()
+        setIsPlaying(true)
+       }
+  }
+
+    return(
+        <div className="flex flex-row mt-10 bg-dark lg:space-x-40 h-12 rounded-lg space-x-4   mx-auto font-quicksand w-11/12 lg:w-full" onClick={playMusic}> 
+
+     
             <div className="flex-row flex lg:space-x-4 space-x-1">
                 <img src={props.display.img} alt="" className="w-10  rounded-lg"/>
                 <FontAwesomeIcon icon={faHeart} className="w-8 lg:h-7 lg:mt-2 h-5 mt-3"/>
@@ -28,6 +46,9 @@ export default function Display(props) {
             <FontAwesomeIcon icon={faEllipsisV} className="mr-4"/>
            </div>
 
+           <audio src={props.display.src} ref={audioEle}/>
+
         </div>
+
     )
 }

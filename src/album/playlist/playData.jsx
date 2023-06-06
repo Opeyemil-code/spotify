@@ -6,7 +6,8 @@ export default [
         text : 'love',
         type : 'Single',
         duration : '2:56',
-        icon : '/icons/Viewchart/more-vertical.png'
+        icon : '/icons/Viewchart/more-vertical.png',
+        src : '/music/03WetDreamz-Copy.mp3',
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export default [
         text : 'Alarm clock',
         type : 'Burna',
         duration : '3:45',
-        icon : '/icons/Viewchart/more-vertical.png'
+        icon : '/icons/Viewchart/more-vertical.png',
+        src : '/music/1 - Another Level - Copy.mp3',
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export default [
         text : 'Stand strong',
         type : 'Davido',
         duration : '3:55',
-        icon : '/icons/Viewchart/more-vertical.png'
+        icon : '/icons/Viewchart/more-vertical.png',
+        src : '/music/Burna_Boy_Deja_Vu_9jaflaver.com_.mp3',
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export default [
         text : 'comfort',
         type : 'Vector',
         duration : '3:02',
-        icon : 'icons/Viewchart/more-vertical.png'
+        icon : 'icons/Viewchart/more-vertical.png',
+        src : "/music/Drake - God's Plan.mp3",
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ export default [
         text : 'Mind Games',
         type : 'Vector',
         duration : '3:03',
-        icon : 'icons/Viewchart/more-vertical.png'
+        icon : 'icons/Viewchart/more-vertical.png',
+        src : '/music/Demmie-Vee-–-Tiff.mp3'
     },
     {
         id: 6,
@@ -51,6 +56,7 @@ export default [
         text : 'Mighty wine',
         type : 'wizkid',
         duration : '2:56',
-        icon : 'icons/Viewchart/more-vertical.png'
+        icon : 'icons/Viewchart/more-vertical.png',
+        src : '/music/Cheque-Ft.-Davido-Wale-Zoom-Remix - Copy.mp3'
     }
 ]

@@ -13,6 +13,6 @@ const mapover = playData.map(
 
 
     return(
-        <div className="bg-whi mx-auto lg:w-2/3 flex flex-col space-y-6 w-">{mapover}</div>
+        <div className="bg-whit mx-auto lg:w-2/3 flex flex-col space-y-6 w-">{mapover}</div>
     )
 }
