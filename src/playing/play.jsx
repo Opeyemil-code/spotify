@@ -1,18 +1,25 @@
 import React from "react";
-import Shuffle from "/new-icon/vuesax/bold/vuesax/bold/shuffle.png"
-import Previous from "/new-icon/vuesax/bold/vuesax/bold/previous.png"
-import { FaPlay } from "react-icons/fa";
-import Next from "/new-icon/vuesax/bold/vuesax/bold/next.png"
-import Speaker from '/public/new-icon/vuesax/bold/volume-high.png'
-import repeat from "/new-icon/vuesax/bold/vuesax/bold/repeate-one.png"
-import { faBackwardStep, faForwardStep, faPhoneVolume, faPlay, faRepeat, faShuffle, faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
+import {useState,useEffect } from "react";
+import useSound from "use-sound";
+import { faBackwardStep, faForwardStep, faPause, faPhoneVolume, faPlay, faRepeat, faShuffle, faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//mport Music from '/playData.jsx'
+
 
 export default function Playing(params) {
 
-    const [currentSongIndex, setCurrentSongIndex] = React.useState(0);
+    const [isPlaying, setisPlaying] = useState(false);
+    const [play,{pause, duration, sound}] = useSound('/music/03WetDreamz-Copy.mp3')
 
-    const [nextSongIndex, setnextSongIndex] = React.useState(currentSongIndex + 1)
+    function PlayingBtn(params) {
+        if (isPlaying) {
+            pause()
+            setisPlaying(false)
+        } else {
+            play()
+            setisPlaying(true)
+        }
+    }
 
 
 
@@ -37,8 +44,10 @@ export default function Playing(params) {
                 <div className="flex flex-row lg:space-x-40 mt-4 mx-auto lg:ml-0 ml-48 space-x-4">
                 <FontAwesomeIcon icon={faShuffle} className="lg:block hidden h-7 mt-1"/>
                 <FontAwesomeIcon icon={faBackwardStep} className="lg:block hidden h-7 mt-1"/>
-                <div className="border px-3 py-2 rounded-full hover:bg-yellow-300">
-                <FontAwesomeIcon icon={faPlay} className=""/>
+                <div className="border px-3 py-2 rounded-full hover:bg-yellow-300" onClick={PlayingBtn}>
+                {
+                    isPlaying ? <FontAwesomeIcon icon={faPause} className="" onClick={PlayingBtn}/> : <FontAwesomeIcon icon={faPlay} onClick={PlayingBtn}/>
+                }
                 </div>
                 <FontAwesomeIcon icon={faForwardStep} className="lg:block  h-7 mt-1"/>
                 <FontAwesomeIcon icon={faRepeat} className="lg:block hidden h-7 mt-1"/>

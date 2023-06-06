@@ -1,7 +1,7 @@
 import React from "react";
 import {faEllipsisV, faHeart, faListUl} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaEllipsisV } from "react-icons/fa";
+import useSound from "use-sound";
 
 
 export default function Display(props) {
@@ -12,6 +12,7 @@ export default function Display(props) {
                 <img src={props.display.img} alt="" className="w-10  rounded-lg"/>
                 <FontAwesomeIcon icon={faHeart} className="w-8 lg:h-7 lg:mt-2 h-5 mt-3"/>
             </div>
+
 
            <div className="text-white mt-2 font-quicksand bg-yellow-90 lg:w-60  text-center w-60">
            <h1>{props.display.text}</h1>
