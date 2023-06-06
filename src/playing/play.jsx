@@ -12,7 +12,7 @@ export default function Playing(params) {
 
     const [isPlaying, setisPlaying] = useState(false);
 
-    const [currentSong, setCurrentSong] = useState(AudioData[1])
+    const [currentSong, setCurrentSong] = useState(AudioData[0])
 
 
     const audioEl = useRef()
