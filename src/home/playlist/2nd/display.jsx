@@ -1,6 +1,7 @@
 import React from "react";
 import love from '/icons/Iconly/Two-tone/Heart.png'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHeart} from '@fortawesome/free-solid-svg-icons'
 
 export default function Display(props) {
 

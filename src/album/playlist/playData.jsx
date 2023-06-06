@@ -3,7 +3,7 @@ export default [
         id: 1,
         img : "/images/Rectangle18.png",
         favorite : '/icons/Heart.png',
-        text : 'let me love you',
+        text : 'love',
         type : 'Single',
         duration : '2:56',
         icon : '/icons/Viewchart/more-vertical.png'
@@ -13,7 +13,7 @@ export default [
         img : "/images/Rectangle14.png",
         favorite : '/icons/Heart.png',
         text : 'Alarm clock',
-        type : 'Burna boy',
+        type : 'Burna',
         duration : '3:45',
         icon : '/icons/Viewchart/more-vertical.png'
     },
