@@ -14,10 +14,10 @@ export default function Display(props) {
 
   function playMusic(params) {
        if (isPlaying) {
-        audioEle.current.play()
+        audioEle.current.pause()
         setIsPlaying(false)
        } else {
-        audioEle.current.pause()
+        audioEle.current.play()
         setIsPlaying(true)
        }
   }
