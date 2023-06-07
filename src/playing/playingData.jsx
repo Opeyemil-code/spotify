@@ -1,4 +1,4 @@
-export default [
+ export default [
     {
         id : 0,
         img: '/images/Rectangle16.png',
@@ -20,8 +20,7 @@ export default [
         artiste : 'Drake',
         title : 'toosie slide'
     },   
-]
-
+]  
 
 /**
  * 

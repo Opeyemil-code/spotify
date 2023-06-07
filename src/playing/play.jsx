@@ -3,16 +3,15 @@ import {useState,useEffect, useRef} from "react";
 //import useSound from "use-sound";
 import { faBackwardStep, faForwardStep, faPause, faPhoneVolume, faPlay, faRepeat, faShuffle, faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AudioData from './playData.jsx';
-
+import Play from '/src/album/playlist/playData.jsx'
 
 export default function Playing(params) {
 
-    const [songs, setSong] = useState(AudioData)
+    const [songs, setSong] = useState(Play)
 
     const [isPlaying, setisPlaying] = useState(false);
 
-    const [currentSong, setCurrentSong] = useState(AudioData[0])
+    const [currentSong, setCurrentSong] = useState(Play[0])
 
 
     const audioEl = useRef()
@@ -39,13 +38,20 @@ export default function Playing(params) {
 
 
     function onPlaying(params) {
-       const duration = audioEl.current.duration;
-       const ct = audioEl.current.currentTime;
+        /** this is used to track duration and current time of our music */
+      const duration = audioEl.current.duration;
+      const ct = audioEl.current.currentTime;
 
-       setCurrentSong({...currentSong, "progress":ct/duration * 100, "length" : duration})
+       setCurrentSong({ ...currentSong, "progress": ct/duration * 100, "length": duration})
     }
 
- 
+
+  const style = {
+    width: `${currentSong.progress+"%"}`,
+    height : '4px',
+    backgroundColor : 'green'
+  }
+
 
     return (
 
@@ -80,8 +86,13 @@ export default function Playing(params) {
          <FontAwesomeIcon icon={faRepeat} className="lg:block hidden h-7 mt-1"/>
          </div>
 
-         <div className="w-full bg-whit">
-         <progress id="file" value="32" max="100" className="w-11/12 h-1 text-red-700 lg:block hidden" > 32% </progress> 
+         <div className="bg-white w-full h-1 rounded-full">
+
+         
+         <div className="bg-green-900 w-0 rounded-full" style={style}></div>
+         
+               
+               
          </div>
 
        </div>

@@ -10,7 +10,7 @@ export default function Display(props) {
   const audioEle = useRef()
 
   const [isPlaying,setIsPlaying] = useState(false)
-  //const [currentSong, setCurrentSong] = useState(playData[0])
+  const [currentSong, setCurrentSong] = useState(playData[0])
 
   function playMusic(params) {
        if (isPlaying) {
