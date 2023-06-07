@@ -33,11 +33,11 @@ export default function Display(props) {
 
 
            <div className="text-white mt-2 font-quicksand bg-yellow-90 lg:w-60  text-center w-60">
-           <h1>{props.display.text}</h1>
+           <h1>{props.display.title}</h1>
            </div>
 
            <div className="mt-2 text-white lg:w-60">
-            <h1>{props.display.type}</h1>
+            <h1>{props.display.artiste}</h1>
            </div>
 
            <div className="mt-2 text-white">{props.display.duration}</div>

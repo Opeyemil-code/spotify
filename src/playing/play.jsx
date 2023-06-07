@@ -7,12 +7,15 @@ import Play from '/src/album/playlist/playData.jsx'
 
 export default function Playing(params) {
 
-    const [songs, setSong] = useState(Play)
+    const [Song, setSong] = useState(Play)
 
     const [isPlaying, setisPlaying] = useState(false);
 
     const [currentSong, setCurrentSong] = useState(Play[0])
 
+
+
+    /** FOR THE PAUSE AND PLAY FUNCTIONALITY */
 
     const audioEl = useRef()
    
@@ -26,15 +29,24 @@ export default function Playing(params) {
         }
     }
 
+   /*********************************************** */
+  
 
-    let currentSongIndex = 0
+   /*** FOR THE PREV BUTTON  */
 
     function PrevBtn(params) {
-        if (currentSongIndex > 0 ) {
-           
+        const index = Song.findIndex(x=>x.title === currentSong.title)
+        if (index == 0 ) {
+           setCurrentSong(Song[Song.length-1])
                 
+        } else {
+            setCurrentSong(Song[index -1])
         }
     }
+
+
+
+
 
 
     function onPlaying(params) {
@@ -46,10 +58,20 @@ export default function Playing(params) {
     }
 
 
+  /*  const clickRef = useRef
+    function checkWidth(e) {
+        let width = clickRef.currrent.clientWidth;
+        const offset = e.nativeEvent.offsetX;
+
+        const divprogress = offset / width * 100
+        audioEl.current.currentTime = divprogress / 100 * currentSong.length
+    } */
+
+
   const style = {
     width: `${currentSong.progress+"%"}`,
     height : '4px',
-    backgroundColor : 'green'
+    backgroundColor : 'yellow'
   }
 
 
@@ -62,7 +84,7 @@ export default function Playing(params) {
      <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand space-x-16 ">
 
        <div className="flex mt-2 flex-row space-x-2 lg:w-60 bg-green-30 w-60 bg-whit">
-         <img src="/images/Rectangle14.png" alt="" className="w-20 rounded-lg "/>
+         <img src={currentSong.img} alt="" className="w-20 rounded-lg "/>
          <div className="mt-1">
              <h1 className="text-xl">{currentSong.title}</h1>
              <p>{currentSong.artiste}</p>
@@ -76,7 +98,9 @@ export default function Playing(params) {
 
          <div className="flex flex-row lg:space-x-40 mt-4 mx-auto lg:ml-0 ml-48 space-x-4">
          <FontAwesomeIcon icon={faShuffle} className="lg:block hidden h-7 mt-1"/>
-         <FontAwesomeIcon icon={faBackwardStep} className="lg:block hidden h-7 mt-1"/>
+
+         <FontAwesomeIcon icon={faBackwardStep} className="lg:block hidden h-7 mt-1" onClick={PrevBtn}/>
+
          <div className="border px-3 py-2 rounded-full hover:bg-yellow-300" onClick={PlayingBtn}>
          {
              isPlaying ? <FontAwesomeIcon icon={faPause} className="h-5" onClick={PlayingBtn}/> : <FontAwesomeIcon icon={faPlay} onClick={PlayingBtn}/>
@@ -85,18 +109,21 @@ export default function Playing(params) {
          <FontAwesomeIcon icon={faForwardStep} className="lg:block  h-7 mt-1"/>
          <FontAwesomeIcon icon={faRepeat} className="lg:block hidden h-7 mt-1"/>
          </div>
+ 
+ 
+        {/** Progress Bar Navigation here *************/}
 
-         <div className="bg-white w-full h-1 rounded-full">
+         <div className="bg-white w-full h-1 rounded-full lg:block hidden">
 
-         
          <div className="bg-green-900 w-0 rounded-full" style={style}></div>
-         
-               
-               
+             
          </div>
 
        </div>
 
+       {/** ***************************** *************/}
+
+  
 
        <div className="flex flex-row bg-green-20 w-96 mt-8 space-x-6">
        <FontAwesomeIcon icon={faVolumeHigh} className=""/>
