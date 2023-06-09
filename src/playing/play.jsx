@@ -32,22 +32,46 @@ export default function Playing(params) {
    /*********************************************** */
   
 
-   /*** FOR THE PREV BUTTON  */
+   /*** FOR THE PREV BUTTON ****/
 
     function PrevBtn(params) {
-        const index = Song.findIndex(x=>x.title === currentSong.title)
+        const index = Song.findIndex(x=>x.title == currentSong.title)
         if (index == 0 ) {
-           setCurrentSong(Song[Song.length-1])
-                
+           setCurrentSong(Song[Song.length-1]) 
+           audioEl.current.play()
+           setisPlaying(false)     
         } else {
             setCurrentSong(Song[index -1])
+          setisPlaying(false)
         }
+        audioEl.current.currentTime = 0
     }
 
 
 
+ /************************************* */
+
+  /*** FOR THE NEXT BUTTON  */
+
+  function NextBtn(params) {
+    const index = Song.findIndex(x=>x.title == currentSong.title)
+    if (index == Song.length - 1 ) {
+       setCurrentSong(Song[0]) 
+       audioEl.current.play()
+      setisPlaying(false)     
+    } else {
+        setCurrentSong(Song[index + 1])
+       setisPlaying(false)
+    }
+    audioEl.current.currentTime = 0
+}
 
 
+/************************************* */
+
+
+
+/** This is for the progress Bar */
 
     function onPlaying(params) {
         /** this is used to track duration and current time of our music */
@@ -58,14 +82,9 @@ export default function Playing(params) {
     }
 
 
-  /*  const clickRef = useRef
-    function checkWidth(e) {
-        let width = clickRef.currrent.clientWidth;
-        const offset = e.nativeEvent.offsetX;
+    /** ********************************** */
 
-        const divprogress = offset / width * 100
-        audioEl.current.currentTime = divprogress / 100 * currentSong.length
-    } */
+  
 
 
   const style = {
@@ -106,7 +125,8 @@ export default function Playing(params) {
              isPlaying ? <FontAwesomeIcon icon={faPause} className="h-5" onClick={PlayingBtn}/> : <FontAwesomeIcon icon={faPlay} onClick={PlayingBtn}/>
          }
          </div>
-         <FontAwesomeIcon icon={faForwardStep} className="lg:block  h-7 mt-1"/>
+         <FontAwesomeIcon icon={faForwardStep} className="lg:block  h-7 mt-1" onClick={NextBtn}/>
+
          <FontAwesomeIcon icon={faRepeat} className="lg:block hidden h-7 mt-1"/>
          </div>
  
@@ -145,5 +165,3 @@ export default function Playing(params) {
 
 
 
-
-// const [play,{pause, duration, sound}] = useSound('/music/03WetDreamz-Copy.mp3')
