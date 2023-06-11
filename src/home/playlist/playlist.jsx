@@ -20,11 +20,11 @@ export default function Playlist(params) {
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 3
+          items: 1
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2
+          items: 1
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
@@ -39,7 +39,7 @@ export default function Playlist(params) {
                 <h1 className="text-white font-quicksand font-bold text-2xl text-end mr-52">Top Charts</h1>
             </div>
 
-            <div className="flex lg:flex-row bg-green-90 lg:space-x- flex-col">
+            <div className="flex lg:flex-row bg-green-90 lg:space-x-5 md:flex-row md:space-x-6 flex-col">
 
           <FirstBox />     
            <SecondMap />
@@ -49,9 +49,10 @@ export default function Playlist(params) {
              <h1 className="text-white  font-quicksand font-bold text-2xl ml-8 lg:hidden mt-4">Top Charts</h1>
            }
 
-           <Carousel responsive={responsive} className="lg:hidden">
+     
+           <Carousel responsive={responsive} className="lg:hidden ">
 
-
+            
             {/** First div boxes */}
            <div className="flex bg-whit pb-4">
 
@@ -81,7 +82,7 @@ export default function Playlist(params) {
 
           {/** Second carousel div box start here  */}
 
-           <div>
+           <div className="">
 
           <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4 pb-4">
 
@@ -134,11 +135,9 @@ export default function Playlist(params) {
           </div>   
 
 
-  </div>
-
-
+    </div>
+    
        </Carousel>
-       
        
         </div>
         </div>
