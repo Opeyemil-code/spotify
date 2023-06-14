@@ -10,7 +10,15 @@ import SecondImag from '/images/Rectangle17.png'
 import Thirdimage from '/images/Rectangle17(1).png'
 
 
-export default function Playlist(params) {
+export default function Playlist(props) {
+
+  const [hidden, sethidden] = React.useState(true)
+          
+          function Hidden(params) {
+             sethidden(
+                (prev) => !hidden
+             )
+          }
 
     const responsive = {
         superLargeDesktop: {
@@ -34,8 +42,9 @@ export default function Playlist(params) {
 
 
     return(
-        <div className="z-10">
-            <div className=" flex bg-red-90 lg:block hidden ">
+      <>
+      {hidden  ? <div className='' >
+            <div className="flex bg-red-90 lg:block hidden ">
                 <h1 className="text-white font-quicksand font-bold text-2xl text-end mr-52">Top Charts</h1>
             </div>
 
@@ -140,6 +149,7 @@ export default function Playlist(params) {
        </Carousel>
        
         </div>
-        </div>
-    )
-}
+        </div> : null }
+        </>
+    ) 
+} 

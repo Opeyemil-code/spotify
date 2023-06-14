@@ -56,12 +56,12 @@ export default function Playing(params) {
   function NextBtn(params) {
     const index = Song.findIndex(x=>x.title == currentSong.title)
     if (index == Song.length - 1 ) {
-       setCurrentSong(Song[0]) 
+       setCurrentSong(Song) 
        audioEl.current.play()
-      setisPlaying(false)     
+      setisPlaying(true)     
     } else {
         setCurrentSong(Song[index + 1])
-       setisPlaying(false)
+       setisPlaying(true)
     }
     audioEl.current.currentTime = 0
 }
@@ -82,7 +82,7 @@ export default function Playing(params) {
     }
 
 
-    /** ********************************** */
+/** ********************************** */
 
   
 
@@ -113,7 +113,7 @@ export default function Playing(params) {
 
        <div className="flex lg:flex-col w-2/3 bg-whit lg:space-y-5 flex-row absolute top-0 lg:relative lg:mt-0 mt-6">
 
-       <audio src={currentSong.src} ref={audioEl} onTimeUpdate={onPlaying}/>
+       <audio src={currentSong.src} ref={audioEl} onTimeUpdate={onPlaying} autoPlay/>
 
          <div className="flex flex-row lg:space-x-40 mt-4 mx-auto lg:ml-0 ml-48 space-x-4">
          <FontAwesomeIcon icon={faShuffle} className="lg:block hidden h-7 mt-1"/>

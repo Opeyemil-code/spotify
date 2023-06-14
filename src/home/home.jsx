@@ -18,8 +18,8 @@ export default function Home(params) {
    return(
          <div className="bg-black">
 
-           <div className="lg:w-2/3 mx-auto bg-black ">
-        <div className="flex flex-row space-x-6 bg-black ">
+           <div className="lg:w- mx-auto bg-black hidde">
+        <div className="flex flex-row space-x-6 bg-black hidde">
         {
             <button onClick={handleMenu}>
                { open  ? <FaBars className="ml-6 w-12 mt-3 lg:hidden bg-white rounded h-7"/> :
@@ -36,16 +36,22 @@ export default function Home(params) {
 
         </div>
         
-
-        <div className="flex lg:flex-row lg:space-x-6 flex-col">
+        {/****/}
+        
+        
+        <div className="lg:w-2/3 mx-auto flex lg:flex-row lg:space-x-6 flex-col hiddn bg-whit lg: lg:hid">
         <Display open={open}/>
         <Playlist />
         </div>
-        
-        
+        </div>
 
 
-    </div>
-         </div>
+        </div>
+
+
+       
+
+
+         
    ) 
 }
