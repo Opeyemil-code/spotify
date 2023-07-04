@@ -14,7 +14,7 @@ function App() {
       <>
       <Home />
       <NewRelease/>
-      <Playing />
+      <Playing/>
       <Album/>
       <Collect />
       </>

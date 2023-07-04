@@ -2,12 +2,21 @@ import React from "react";
 import Display from "./Display";
 import playData from "./playData";
 
-export default function Mapp(params) {
-const mapover = playData.map(
+export default function Mapp(props) {
+
+    const [isPlaying,setIsPlaying] = React.useState(false)
+
+  
+
+  const mapover = playData.map(
     (params) => {
         return <Display
         key={params.id}
-        display={params}/>
+        id={params.id}
+        display={params}
+        isPlaying={isPlaying}
+        //playMusic={playMusic}
+        />
     }
 )
 

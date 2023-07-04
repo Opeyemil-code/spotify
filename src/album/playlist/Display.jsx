@@ -10,17 +10,23 @@ export default function Display(props) {
   const audioEle = useRef()
 
   const [isPlaying,setIsPlaying] = useState(false)
-  const [currentSong, setCurrentSong] = useState(playData[0])
 
-  function playMusic(params) {
-       if (isPlaying) {
-        audioEle.current.pause()
-        setIsPlaying(false)
-       } else {
-        audioEle.current.play()
-        setIsPlaying(true)
-       }
+  function playMusic(id) {
+    
+    if (isPlaying) {
+     audioEle.current.pause()
+     setIsPlaying(false)
+     console.log(isPlaying)
+    } else {
+     audioEle.current.play()
+    setIsPlaying(true)
+      console.log(id)
+      console.log(isPlaying)
+     
+ }
+ 
   }
+ 
 
     return(
         <div className="flex flex-row mt-10 bg-dark lg:space-x-40 h-12 rounded-lg space-x-4   mx-auto font-quicksand w-11/12 lg:w-full" onClick={playMusic}> 
@@ -46,7 +52,7 @@ export default function Display(props) {
             <FontAwesomeIcon icon={faEllipsisV} className="mr-4"/>
            </div>
 
-           <audio src={props.display.src} ref={audioEle}/>
+           <audio src={props.display.src} ref={audioEle} />
 
         </div>
 

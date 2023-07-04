@@ -59,11 +59,11 @@ export default function Playlist(props) {
            }
 
      
-           <Carousel responsive={responsive} className="lg:hidden ">
+           <Carousel responsive={responsive} className="lg:hidden z-0">
 
             
             {/** First div boxes */}
-           <div className="flex bg-whit pb-4">
+           <div className="flex bg-whit pb-4 z-1">
 
            <div className="flex flex-row space-x-4 bg-darkalt w-80 rounded-lg mx-auto mt-4 pb-4">
 

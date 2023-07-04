@@ -5,7 +5,7 @@ import { faBackwardStep, faForwardStep, faPause, faPhoneVolume, faPlay, faRepeat
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Play from '/src/album/playlist/playData.jsx'
 
-export default function Playing(params) {
+export default function Playing() {
 
     const [Song, setSong] = useState(Play)
 
@@ -19,13 +19,15 @@ export default function Playing(params) {
 
     const audioEl = useRef()
    
-    function PlayingBtn(params) {
+    function togglePlayPause(params) {
         if (isPlaying) {
             audioEl.current.pause()
             setisPlaying(false)
         } else {
             audioEl.current.play()
             setisPlaying(true)
+            
+            
         }
     }
 
@@ -36,22 +38,21 @@ export default function Playing(params) {
 
     function PrevBtn(params) {
         const index = Song.findIndex(x=>x.title == currentSong.title)
-        if (index == 0 ) {
-           setCurrentSong(Song[Song.length-1]) 
+        if (index == Song.length ) {
+           setCurrentSong(Song.length - 1) 
            audioEl.current.play()
-           setisPlaying(false)     
+           setisPlaying(true)     
         } else {
             setCurrentSong(Song[index -1])
-          setisPlaying(false)
+          setisPlaying(true)
         }
         audioEl.current.currentTime = 0
     }
 
-
-
  /************************************* */
 
   /*** FOR THE NEXT BUTTON  */
+
 
   function NextBtn(params) {
     const index = Song.findIndex(x=>x.title == currentSong.title)
@@ -77,7 +78,7 @@ export default function Playing(params) {
         /** this is used to track duration and current time of our music */
       const duration = audioEl.current.duration;
       const ct = audioEl.current.currentTime;
-
+     
        setCurrentSong({ ...currentSong, "progress": ct/duration * 100, "length": duration})
     }
 
@@ -96,9 +97,9 @@ export default function Playing(params) {
 
     return (
 
-    <section className="bg-red-900  text-red-800 z-99">
+    <section className="z-50">
            
-    <div className="bg-gradient-to-r from-gray-800 to-gray-300 top- bottom-0   fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white h-28">
+    <div className="bg-gradient-to-r from-gray-800 to-gray-300 top- bottom-0   fixed lg:top-96 lg:mt-80 left-0 right-0 z-50 mx-auto lg:h-40 text-white h-28 z-50">
     
      <main className="lg:flex flex-row w-11/12 mx-auto font-quicksand space-x-16 ">
 
@@ -120,11 +121,16 @@ export default function Playing(params) {
 
          <FontAwesomeIcon icon={faBackwardStep} className="lg:block hidden h-7 mt-1" onClick={PrevBtn}/>
 
-         <div className="border px-3 py-2 rounded-full hover:bg-yellow-300" onClick={PlayingBtn}>
+         {/* CONDITION FOR DISPLAYING THE PLAY AND PAUSE   */ 
+
+         <div className="border px-3 py-2 rounded-full hover:bg-yellow-300" >
          {
-             isPlaying ? <FontAwesomeIcon icon={faPause} className="h-5" onClick={PlayingBtn}/> : <FontAwesomeIcon icon={faPlay} onClick={PlayingBtn}/>
-         }
+             isPlaying ? <FontAwesomeIcon icon={faPause} className="h-5" onClick={togglePlayPause}/> : <FontAwesomeIcon icon={faPlay} onClick={togglePlayPause}/>
+         }  
          </div>
+
+        /** **************************************88 */}
+
          <FontAwesomeIcon icon={faForwardStep} className="lg:block  h-7 mt-1" onClick={NextBtn}/>
 
          <FontAwesomeIcon icon={faRepeat} className="lg:block hidden h-7 mt-1"/>
